@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+}
+
+.quiz-box {
+  background: rgba(20, 20, 30, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 35px 28px;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00e6ff;
+  text-shadow: 0 0 8px rgba(0, 230, 255, 0.6);
+}
+
+.progress {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  color: #aaa;
+}
+
+.question {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.option {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.25s ease-in-out;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.option:hover {
+  background: rgba(0, 230, 255, 0.15);
+  transform: scale(1.02);
+}
+
+.option.correct {
+  background: rgba(0, 255, 128, 0.15);
+  border-color: #00ff80;
+  color: #00ff80;
+  text-shadow: 0 0 6px rgba(0, 255, 128, 0.6);
+}
+
+.option.wrong {
+  background: rgba(255, 77, 77, 0.15);
+  border-color: #ff4d4d;
+  color: #ff4d4d;
+  text-shadow: 0 0 6px rgba(255, 77, 77, 0.6);
+}
+
+.bottom {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.btn {
+  background: linear-gradient(90deg, #00e6ff, #ff00cc);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 230, 255, 0.6);
+}
+
+.btn:hover {
+  opacity: 0.92;
+  transform: scale(1.04);
+}
+
+.result {
+  margin-top: 25px;
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
